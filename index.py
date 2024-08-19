@@ -6,7 +6,7 @@ url = 'https://en.wikipedia.org/wiki/List_of_largest_corporate_profits_and_losse
 
 page = requests.get(url)
 
-soup = BeautifulSoup(page.text, 'html')
+soup = BeautifulSoup(page.text, 'html.parser')
 
 # find the table by its class name, wiki table class names are the same, "find" finds the first
 table = soup.find('table', class_='wikitable sortable')
